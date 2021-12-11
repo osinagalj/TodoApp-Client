@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseURL: 'https://todolist-osinagalj.herokuapp.com/'
+  apiBaseURL: 'https://todolist-ensolvers-back.herokuapp.com/'
 };
