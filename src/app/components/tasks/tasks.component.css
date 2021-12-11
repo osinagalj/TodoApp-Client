@@ -1,0 +1,77 @@
+
+/* ---------Task-update and delete--------- */
+
+.task-update-delete {
+  display: flex;
+  align-items: center;
+  margin-left: 0.7em;
+}
+.delete,
+.update {
+  font-size: 1.4rem;
+}
+.delete a {
+  margin-left: 0.8em;
+  color: #f12727;
+}
+
+.update a {
+  color: rgb(0, 162, 255);
+}
+
+.completed p {
+  color: gray;
+  text-decoration: line-through;
+}
+
+
+/* ---------back-button----------- */
+
+.back-button {
+  border-radius: 5px;
+  height: 9%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 2em;
+}
+
+.back-button a {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  color: white;
+  margin-right: 1em;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+/* ---------new-task-button----------- */
+
+.new-task-button {
+  border-radius: 5px;
+  height: 9%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+}
+
+.new-task-button a {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  color: white;
+  margin-right: 1em;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}

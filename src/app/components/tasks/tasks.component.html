@@ -1,0 +1,106 @@
+<div class="container mt-5">
+  <!-- Task Area -->
+  <div class="sider">
+    <div class="dots">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+      <div class="dot3"></div>
+    </div>
+
+    <div class="my-name">
+      <h2>Folders<i class="fas fa-angle-right"></i>    {{folderName}}</h2>
+    </div>
+
+    <div *ngIf="todoItems.length > 0">
+      <div class="incomplete-task-up">
+        <div class="incomplete-task">
+          <p>You have {{todoTotal}} <span style="color: #FFBD44;">Incompleted</span> Tasks :(</p>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="todoItems.length == 0">
+      
+      <div class="incomplete-task-up">
+        <div class="incomplete-task">
+          <p>You don't have any incomplete task <span style="color: #FFBD44;">Incompleted</span> Tasks :(</p>
+        </div>
+      </div>
+
+      <h5 style="text-align: center; color:white" >The list is empty ...</h5>
+    </div>
+
+    <div class="uppertaskarea">
+      <div class="taskarea">
+        
+            <div *ngFor="let item of todoItems">
+                <div   [ngClass]="(item.done == true)?'tasks completed':'tasks'" style='width: 100%;' >
+                    <input class="form-check-input" type="checkbox" value="checked" id="flexCheckDefault" [checked]="item.done"
+                    (click)="changeTaskState(item)" [disabled] = "item.isEditing" style='margin-top: 0.5rem;margin-right: 10px;'/>
+
+
+                    <div *ngIf="item.done == true" style='width: 90%;'>
+                      <input type="text" [(ngModel)]="item.name" [disabled] = "!item.isEditing" style='color: gray;text-decoration: line-through; margin-top: 5px;'/>
+                    </div>
+                    <div *ngIf="item.done == false" style='width: 90%;'>
+                      <input type="text" [(ngModel)]="item.name" [disabled] = "!item.isEditing" style='margin-top: 5px'/>
+                    </div>
+                  
+    
+                <div *ngIf="!item.isEditing">
+                  <div class="task-update-delete">
+                    <div class="update">
+                        <a>
+                          <i class="fas fa-pen-square" (click)="edit(item)"></i>
+                        </a>
+                    </div>
+                  <div class="delete">
+                    <a >
+                      <i class="fas fa-times-circle" (click)="removeTask(item.id)" ></i>
+                    </a>
+                  </div>
+                  </div>
+
+                </div>
+                <div *ngIf="item.isEditing">
+                  <div class="task-update-delete">
+                  <div >
+                      <button type="button" class="btn btn-success" (click)="updateTask(item)">
+                        Save
+                      </button>
+                  </div>
+                  </div>
+
+                </div>
+
+    
+                </div>
+            </div>
+       
+
+      </div>
+
+
+
+    </div>
+
+    <div style="display: flex;flex-wrap: wrap;" >
+      <div class="back-button" >
+        <a href="#" outerLink="folders"> <i class="fas fa-backward"></i>
+  
+           Back</a>
+      </div> 
+  
+      <div class="new-task-button" style='margin-left:auto;justify-content: flex-end;' (click)="addTask()">
+        <a >Task  <i class="fas fa-plus-square"></i> </a>
+      </div>
+  
+    </div>
+
+
+  </div>
+
+</div>
+
+
+

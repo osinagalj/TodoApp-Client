@@ -1,0 +1,45 @@
+<div class="container mt-5">
+
+    <!-- Task Area -->
+    <div class="sider ">
+      <div class="dots">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+        <div class="dot3"></div>
+      </div>
+  
+      <div class="text-center">
+        <h2>Create Folder</h2>
+      </div>
+  
+
+
+      <div class="tasks">
+            <input type="text" placeholder="Folder's name.." [(ngModel)]="folderTitle" />
+      </div>
+  
+
+      <div>
+        <div class="new-task-button" style='  display: flex;
+        align-items: center;
+        justify-content: center' (click)="addFolder()">
+          <a>Add </a>
+        </div>
+      </div>
+  
+
+      <div style="margin-top:23rem;display: flex;flex-wrap: wrap; " >
+        <div class="back-button" >
+          <a href="#" outerLink="folders"> <i class="fas fa-backward"></i>
+  
+             Back</a>
+        </div> 
+      </div>
+  
+
+  
+    </div>
+  </div>
+  
+  
+  

@@ -1,0 +1,62 @@
+<div class="container mt-5">
+
+    <!-- Task Area -->
+    <div class="sider">
+      <div class="dots">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+        <div class="dot3"></div>
+      </div>
+  
+      <div class="my-name">
+        <h2>Hello, {{userName}}</h2>
+      </div>
+  
+      <div *ngIf="todoItems.length > 0">
+        <div class="incomplete-task-up">
+          <div class="incomplete-task">
+            <p>You have {{todoItems.length}} <span style="color: #FFBD44;">folders</span> </p>
+          </div>
+        </div>
+    
+      </div>
+  
+      <div class="uppertaskarea">
+        <div class="taskarea">
+          
+  
+              <div *ngFor="let item of todoItems">
+                  <div   class="tasks" routerLink="/folders/{{item.id}}"> <!-- [ngClass]="tasks" -->
+
+                    <i class="fas fa-folder" style="margin-top: 0.7rem;color:rgb(226, 235, 49)"></i>
+                    <div style='margin-top: 0.4rem;float:left;color:white;position:absolute;margin-left: 40px;'>{{item.name}}</div> 
+      
+                  <div>
+                    <div class="task-update-delete">
+                    <div class="delete">
+                      <a href="#">
+                        <i class="fas fa-times-circle"   (click)="removeTask(item.id)"></i> <!-- -->
+                      </a>
+                    </div>
+                    </div>
+  
+                  </div>
+
+                  </div>
+      
+                  </div>
+             
+         
+  
+        </div>
+      </div>
+      
+      <div class="new-task-button" routerLink="create-folder"> <!-- -->
+          
+        <a> Folder
+          <i class="fas fa-plus-square"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
