@@ -111,8 +111,9 @@ a {
   border: none;
   color: #fff;
   font-size: 14px;
+  margin-left: 10%;
   position: relative;  
-  float: left;
+  float: center;
   text-align: center;
   align-items: center;
   align-content: center;
