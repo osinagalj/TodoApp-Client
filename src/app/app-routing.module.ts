@@ -7,11 +7,7 @@ import { CreateFolderComponent } from './components/create-folder/create-folder.
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-
-// componentes
-
 const routes: Routes = [
-  //{ path: '', component: ListarProductosComponent },
   { path: '', component: FoldersComponent },
   { path: 'folders', component: FoldersComponent },
   { path: 'folders/:id', component: TasksComponent },

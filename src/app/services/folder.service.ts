@@ -7,8 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class FolderService {
-  //url = 'http://localhost:8080/api/v0/folders/';
-
+ 
   private url = environment.apiBaseURL + 'api/v0/folders/';
 
   constructor(private http: HttpClient) { }

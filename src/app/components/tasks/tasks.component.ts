@@ -27,17 +27,11 @@ export class TasksComponent implements OnInit {
     let id = String(this.route.snapshot.paramMap.get('id'));
     this._folderService.getFolder(id).subscribe(data => {
       this.folder = data;
-      console.log('FOLDER en type = ');
-      console.log(this.folder);
       this.folderName = this.folder.name;
       this.getTasks();
     }, error => {
       console.log(error);
     })
-
-   
-
-   
   }
 
 
@@ -72,7 +66,6 @@ export class TasksComponent implements OnInit {
 
   //Creating a new Task
   addTask() {
-    
     console.log('creando la tarea');
     let id = String(this.route.snapshot.paramMap.get('id'));
     const TASK: Item = {
@@ -102,7 +95,6 @@ export class TasksComponent implements OnInit {
 
 
   edit(item:any) {
-    console.log('Esta editandooooooooo');
     item.isEditing = true;
     this.currentTitle = item.name;
   }

@@ -8,15 +8,13 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ItemService {
-  //url = 'http://localhost:8080/api/v0/tasks/';
+  
   private url = environment.apiBaseURL + 'api/v0/tasks/';
   constructor(private http: HttpClient) { }
 
   getItems(): Observable<any> {
     return this.http.get(this.url);
   }
-
-
 
   deleteItem(id: string): Observable<any> {
     return this.http.delete(this.url + id);
