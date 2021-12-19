@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AuthService {
 
-  private url = environment.apiBaseURL + 'auth';
+  private url = environment.apiBaseURL + 'auth/';
 
   constructor(private httpClient: HttpClient) { }
 

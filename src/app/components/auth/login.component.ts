@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
       },
       err => {
         this.isLogged = false;
-        this.toastr.error('Login' ,'Task deleted');
+        this.toastr.error('Login Fail' ,'User or Password incorrect!');
         console.log('error: ', err)
         this.errMsj = err.error.message;
         this.toastr.error(this.errMsj, 'Fail', {
