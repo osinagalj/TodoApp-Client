@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class FolderService {
  
-  private url = environment.apiBaseURL + 'api/v0/folders/';
+  private url = environment.apiBaseURL + 'folders/';
 
   constructor(private http: HttpClient) { }
 
@@ -25,6 +25,7 @@ export class FolderService {
   }
 
   saveFolder(Folder: Folder): Observable<any> {
+    console.log('url aaaa :' ,this.url)
     return this.http.post(this.url, Folder);
   }
 
