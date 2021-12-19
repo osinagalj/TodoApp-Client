@@ -12,11 +12,6 @@ html {
   font-family: "Roboto", sans-serif;
   height: 100%;
 }
-
-html {
-  height: 100%;
-}
-
 body {
     
   align-items: center;
@@ -31,6 +26,11 @@ body {
   background-position: center center;
   background-attachment: fixed;
 }
+html {
+  height: 100%;
+}
+
+
 
 h1 {
   color: white;
@@ -63,9 +63,7 @@ h2 {
   justify-content: center;
 }
 
-::placeholder {
-  color: rgba(255, 255, 255, 0.404);
-}
+
 
 .dots {
   height: 17px;
@@ -137,27 +135,6 @@ input:enabled[type="text"] {
 }
 
 
-input[type="text"] {
-
-  width: 75%;
-  font-size: 1rem;
-  /* background: rgba(0, 0, 0, 0.4); */
- /*  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
- /*  backdrop-filter: blur(0.5px); */
-  /* -webkit-backdrop-filter: blur(0.5px); */
- /*  border-radius: 10px; */
-   /* border: 0px solid rgba(255, 255, 255, 0.18);  */
-  color: white;
-  background: rgba(0, 0, 0, 0);
-
-  border: 0px ;
-
-}
-
-
-input[type="text"]:focus {
-  outline: none;
-}
 
 /* ----------Checkbox-area------------ */
 
@@ -178,18 +155,7 @@ input[type="checkbox"] {
   justify-content: center;
 }
 
-/* ----------Save and Delete buttons----------- */
-input[type="submit"] {
-  margin-left: 0.4em;
-  margin-top: 0.1em;
-  margin-right: 0.6em;
-  padding: 0.6em;
-  width: 7em;
-  border-width: 0;
-  border-radius: 7px;
-  cursor: pointer;
-  color: white;
-}
+
 
 .sv-and-dl {
   display: flex;

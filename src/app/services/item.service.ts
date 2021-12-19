@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ItemService {
   
-  private url = environment.apiBaseURL + 'api/v0/tasks/';
+  private url = environment.apiBaseURL + 'tasks/';
   constructor(private http: HttpClient) { }
 
   getItems(): Observable<any> {

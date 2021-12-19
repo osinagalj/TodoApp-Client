@@ -1,5 +1,5 @@
-import { LoginComponent } from './components/login/login.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { LoginComponent } from './components/auth/login.component';
+import { RegisterComponent } from './components/auth/register.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { FoldersComponent } from './components/folders/folders.component';
 import { CreateFolderComponent } from './components/create-folder/create-folder.component';
@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'folders/:id', component: TasksComponent },
   { path: 'create-folder', component: CreateFolderComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignUpComponent },
+  { path: 'signup', component: RegisterComponent },
   { path: 'tasks', component: TasksComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];

@@ -5,6 +5,7 @@ import { Folder } from 'src/app/models/folder';
 import { FolderService } from 'src/app/services/folder.service';
 import { ItemService } from 'src/app/services/item.service';
 import { Router} from '@angular/router'
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-create-folder',
@@ -15,11 +16,18 @@ export class CreateFolderComponent implements OnInit {
 
   constructor(private _folderService: FolderService,
     private toastr: ToastrService,
+    private tokenService: TokenService,
     private _router:Router) { }
 
   folderTitle: string = '';
 
+  roles: string[];
+  isAdmin = true;
+
   ngOnInit(): void {
+
+    this.roles = this.tokenService.getAuthorities();
+
   }
 
 

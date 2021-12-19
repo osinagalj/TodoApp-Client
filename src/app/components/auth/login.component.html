@@ -1,0 +1,73 @@
+
+<app-menu></app-menu>
+<div class="text-center" *ngIf="isLogged; else loggedOut">
+    <h2>Ya has iniciado sesión</h2>
+</div>
+ <ng-template #loggedOut>
+    <div class="wrapper">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active"> Sign In </h2>
+          <h2 class="inactive underlineHover" routerLink="/signup">Sign Up </h2>
+      
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="/assets/images/user.png" id="icon" alt="User Icon" width='50px' />
+          </div>
+          <form (ngSubmit)="onLogin()" novalidate>
+          <!-- Login Form -->
+         
+            <input type="text" id="login" class="fadeIn first" name="Username" placeholder="Username" [(ngModel)]="username">
+            <input type="text" id="password" class="fadeIn secodn" name="Password" placeholder="Password" [(ngModel)]="password">
+            <input type="submit" class="fadeIn third mt-5" value="Log In" >
+         
+      
+          <!-- Remind Passowrd -->
+          <div id="formFooter">
+            <a class="underlineHover" href="#">Forgot Password?</a>
+          </div>
+          </form>
+
+      
+        </div>
+    </div>
+
+ </ng-template>
+
+
+<!-- 
+  <ng-template #loggedOut>
+    <div class="container d-flex justify-content-center  mt-5">
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" routerLink="/login">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" style='color:black' routerLink="/signup">Crear Cuenta</a>
+                    </li>
+                    
+                  </ul>
+            </div>
+            <div class="card-body">
+                <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+                    <div class="form-group">
+                        <label for="nombreUsuario">Nombre de Usuario</label>
+                        <input type="text" name="nombreUsuario" id="nombreUsuario" class="form-control"
+                        [(ngModel)]="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password" class="form-control"
+                        [(ngModel)]="password" required>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
+                            <i class="fas fa-sign-in-alt"></i> Iniciar Sesión</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</ng-template> -->

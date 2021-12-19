@@ -14,8 +14,12 @@ import { FoldersComponent } from './components/folders/folders.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { CreateFolderComponent } from './components/create-folder/create-folder.component';
-import { LoginComponent } from './components/login/login.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { LoginComponent } from './components/auth/login.component';
+import { RegisterComponent } from './components/auth/register.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { interceptorProvider } from './components/interceptors/prod-interceptor.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +28,9 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     HeaderComponent,
     CreateFolderComponent,
     LoginComponent,
-    SignUpComponent
+    RegisterComponent,
+    MenuComponent
+
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [interceptorProvider], //JWT
   bootstrap: [AppComponent]
 })
 export class AppModule { }

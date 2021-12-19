@@ -67,7 +67,7 @@ export class TasksComponent implements OnInit {
   //Creating a new Task
   addTask() {
     console.log('creando la tarea');
-    let id = String(this.route.snapshot.paramMap.get('id'));
+    let id = Number(this.route.snapshot.paramMap.get('id'));
     const TASK: Item = {
       name: 'new Task',
       done: false,
