@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
         this.toastr.success('Bienvenido ' + data.username, 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
-        this.router.navigate(['/']);
+        this.router.navigate(['/folders']);
       },
       err => {
         this.isLogged = false;
