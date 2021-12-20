@@ -18,6 +18,7 @@ import { LoginComponent } from './components/auth/login.component';
 import { RegisterComponent } from './components/auth/register.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { interceptorProvider } from './components/interceptors/prod-interceptor.service';
+import { ErrorComponent } from './components/error/error.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { interceptorProvider } from './components/interceptors/prod-interceptor.
     CreateFolderComponent,
     LoginComponent,
     RegisterComponent,
-    MenuComponent
+    MenuComponent,
+    ErrorComponent
 
   ],
   imports: [
