@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ErrorComponent } from './error.component';
+import { NotFoundComponentComponent } from './not-found-component.component';
 
-describe('ErrorComponent', () => {
-  let component: ErrorComponent;
-  let fixture: ComponentFixture<ErrorComponent>;
+describe('NotFoundComponentComponent', () => {
+  let component: NotFoundComponentComponent;
+  let fixture: ComponentFixture<NotFoundComponentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ErrorComponent ]
+      declarations: [ NotFoundComponentComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ErrorComponent);
+    fixture = TestBed.createComponent(NotFoundComponentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

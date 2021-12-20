@@ -13,6 +13,15 @@ export class TokenService {
   roles: Array<string> = [];
 
   constructor() { }
+  
+  public isLogged: Boolean  = false;
+  isLogged2():Boolean{
+    return this.isLogged;
+  }
+
+  setLogged(logged: Boolean ){
+    this.isLogged = logged;
+  }
 
   public setToken(token: string): void {
     window.sessionStorage.removeItem(TOKEN_KEY);

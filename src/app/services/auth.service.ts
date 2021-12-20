@@ -13,6 +13,8 @@ export class AuthService {
 
   private url = environment.apiBaseURL + 'auth/';
 
+  public isLogged: Boolean  = false;
+
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {
@@ -21,5 +23,13 @@ export class AuthService {
 
   public login(loginUsuario: LoginUsuario): Observable<JwtDTO> {
     return this.httpClient.post<JwtDTO>(this.url + 'login', loginUsuario);
+  }
+
+   isLogged2():Boolean{
+    return this.isLogged;
+  }
+
+  setLogged(logged: Boolean ){
+    this.isLogged = logged;
   }
 }

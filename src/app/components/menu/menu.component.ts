@@ -17,8 +17,10 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     if (this.tokenService.getToken()) {
       this.isLogged = true;
+      this.tokenService.setLogged(true);
     } else {
       this.isLogged = false;
+      this.tokenService.setLogged(false);
     }
   }
 
@@ -27,7 +29,8 @@ export class MenuComponent implements OnInit {
     //window.location.reload();
     this.router.navigate(['/login']);
     console.log('ON LOG OUT')
-    
+    this.tokenService.setLogged(false);
+  
   }
 
 }

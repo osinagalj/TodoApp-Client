@@ -46,6 +46,7 @@ export class LoginComponent implements OnInit {
         this.tokenService.setToken(data.token);
         this.tokenService.setUserName(data.username);
         this.tokenService.setAuthorities(data.authorities);
+        this.tokenService.setLogged(true);
         this.roles = data.authorities;
         this.toastr.success('Bienvenido ' + data.username, 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'

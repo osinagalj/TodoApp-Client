@@ -18,7 +18,7 @@ import { LoginComponent } from './components/auth/login.component';
 import { RegisterComponent } from './components/auth/register.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { interceptorProvider } from './components/interceptors/prod-interceptor.service';
-import { ErrorComponent } from './components/error/error.component';
+import { NotFoundComponentComponent } from './components/not-found-component/not-found-component.component';
 
 
 @NgModule({
@@ -31,7 +31,7 @@ import { ErrorComponent } from './components/error/error.component';
     LoginComponent,
     RegisterComponent,
     MenuComponent,
-    ErrorComponent
+    NotFoundComponentComponent
 
   ],
   imports: [
